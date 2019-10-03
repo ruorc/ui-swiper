@@ -872,7 +872,7 @@ function SwiperFactory (Dom7, $parse) {
           if (typeof translate === 'undefined') {
               translate = s.translate || 0;
           }
-          var translatesDiff = s.maxTranslate() - s.minTranslate();
+          var translatesDiff = Math.abs(s.maxTranslate()) - s.minTranslate();
           var wasBeginning = s.isBeginning;
           var wasEnd = s.isEnd;
           if (translatesDiff === 0) {
